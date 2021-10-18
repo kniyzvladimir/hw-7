@@ -1,38 +1,38 @@
 public class Trapezoid extends Shape {
-    private int sideA;
-    private int sideB;
-    private int sideC;
-    private int sideD;
+    private int upperBorder;
+    private int bottomBorder;
+    private int leftBorder;
+    private int rightBorder;
 
-    public Trapezoid(String name, int sideA, int sideB, int sideC, int sideD) {
+    public Trapezoid(String name, int upperBorder, int bottomBorder, int sideC, int rightBorder) {
         super(name);
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
-        this.sideD = sideD;
+        this.upperBorder = upperBorder;
+        this.bottomBorder = bottomBorder;
+        this.leftBorder = sideC;
+        this.rightBorder = rightBorder;
     }
 
-    public int getSideA() {
-        return sideA;
+    public int getUpperBorder() {
+        return upperBorder;
     }
 
-    public int getSideB() {
-        return sideB;
+    public int getBottomBorder() {
+        return bottomBorder;
     }
 
-    public int getSideC() {
-        return sideC;
+    public int getLeftBorder() {
+        return leftBorder;
     }
 
-    public int getSideD() {
-        return sideD;
+    public int getRightBorder() {
+        return rightBorder;
     }
 
     @Override
-    public int area() {
-        double h = Math.sqrt(
-                Math.pow(sideC, 2) - Math.pow((Math.pow((sideA - sideB), 2) + Math.pow(sideC, 2) - Math.pow(sideD, 2) / 2 * (sideA - sideB)), 2)
+    public int getArea() {
+        double height = Math.sqrt(
+                Math.pow(leftBorder, 2) - Math.pow((Math.pow((upperBorder - bottomBorder), 2) + Math.pow(leftBorder, 2) - Math.pow(rightBorder, 2) / 2 * (upperBorder - bottomBorder)), 2)
                 );
-        return (int) ((sideA+sideB) / 2 * h);
+        return (int) ((upperBorder + bottomBorder) / 2 * height);
     }
 }

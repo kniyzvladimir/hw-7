@@ -23,9 +23,10 @@ public class Triangle extends Shape{
     }
 
     @Override
-    public int area() {
-        double p = (sideA + sideB + sideC) / 2d;
-        double h = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC) / sideA);
-        return (int) h;
+    public int getArea() {
+        double semiPerimeter = (sideA + sideB + sideC) / 2d;
+        double height = Math.sqrt(semiPerimeter * (semiPerimeter - sideA) * (semiPerimeter - sideB) * (semiPerimeter - sideC) / sideA);
+        return (int) height;
     }
 }
+

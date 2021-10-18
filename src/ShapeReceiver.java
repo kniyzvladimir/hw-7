@@ -5,7 +5,7 @@ public class ShapeReceiver {
         this.shape = shape;
     }
 
-    public void shapeNamePrinter() {
+    public void printNameShape() {
         System.out.println(shape.getName());
     }
 }

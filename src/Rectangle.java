@@ -17,7 +17,7 @@ public class Rectangle extends Shape{
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return sideA * sideB;
     }
 }

@@ -9,9 +9,6 @@ public abstract class Shape {
         this.name = name;
     }
 
-    public abstract int area();
+    public abstract int getArea();
 
-    public void nameShape (){
-        System.out.println(name);
-    }
 }

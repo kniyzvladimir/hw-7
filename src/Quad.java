@@ -11,7 +11,7 @@ public class Quad extends Shape{
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return side * side;
     }
 }
